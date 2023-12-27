@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.sidebar-menu a {
+    @apply flex items-center gap-4 py-2 pl-3 pr-4 hover:bg-blue-50 font-medium border-l-4 border-transparent whitespace-nowrap;
+}
+.sidebar-menu .active {
+    @apply border-blue-600 bg-blue-50 text-blue-600;
+}
+.sidebar-menu-icon {
+    @apply text-3xl;
+}
+.sidebar-dropdown a {
+    @apply font-normal;
+}
+.sidebar-collapse {
+    @apply md:w-16 -left-full md:left-0;
+}
+.sidebar-collapse ~ #main {
+    @apply pl-0 md:pl-16;
+}
+.sidebar-collapse .sidebar-user-profile,
+.sidebar-collapse .sidebar-menu-title {
+    @apply hidden;
+}
+.tab-indicator > * {
+    @apply pb-1 border-b-4 border-transparent text-lg font-medium text-gray-500 cursor-pointer;
+}
+.tab-indicator .active {
+    @apply text-blue-600 border-blue-600;
+}
